@@ -1,0 +1,13 @@
+#container {
+    background-color: #121212;
+    height: 150px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    border-style: solid;
+    border-width: 1px 0 0 0;
+    border-image: linear-gradient(to right, #3acfd5 0%, #3a4ed5 100%) 1;
+}
+
+

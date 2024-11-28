@@ -1,0 +1,143 @@
+:root {
+    --gradient: linear-gradient(to right, #3acfd5 0%, #3a4ed5 100%);
+    --main-color: #3acfd5;
+}
+
+.title-message {
+    margin: 0 50px;
+    text-align: center;
+    padding: 50px;
+    font-size: 80px;
+    font-weight: 600;
+    background: var(--gradient);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+}
+
+form {
+    padding: 20px 50px;
+    display: flex;
+    flex-direction: column;
+    gap: 3em;
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+    gap: 2em;
+}
+
+.atv {
+    display: flex;
+    flex-direction: row;
+    gap: 5em;
+    justify-content: center;
+    align-items: center;
+}
+
+.col {
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+    width: 20em;
+    justify-content: center;
+    align-items: center;
+    border: solid white 2px;
+    padding: 1em 0 2em 0;
+    border-radius: 20px;
+}
+
+.element {
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    align-items: baseline;
+}
+
+input[type="text"] {
+    width: 10em;
+    height: 2em;
+    font-size: 3em;
+    border: solid white;
+    border-width: 0 0 2px 0;
+}
+
+input[type="date"] {
+    width: 10em;
+    height: 2em;
+    font-size: 3em;
+    border: solid white;
+    border-width: 0 0 2px 0;
+}
+
+input[type="number"] {
+    width: 3em;
+    height: 2em;
+    font-size: 3em;
+    border: solid white;
+    border-width: 0 0 2px 0;
+}
+
+input:focus {
+    outline: none;
+}
+
+label {
+    width: fit-content;
+    height: fit-content;
+    font-size: 2.5em;
+    color: var(--main-color);
+}
+
+.atv-label {
+    text-align: center;
+    font-size: 3em;
+}
+
+.atv-input {
+    text-align: center;
+}
+
+#comment {
+    width: 90vw;
+    background-color: #121212;
+    border-radius: 20px;
+    height: 300px;
+    border: solid white 2px;
+    font-size: 2.5em;
+    padding: 10px 20px;
+}
+
+#price {
+    width: 5em;
+}
+
+input[type="checkbox"] {
+    width: 4em;
+    height: 4em;
+}
+
+.ret {
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    align-items: left;
+    gap: 30px;
+    margin: 0 0 0 50px;
+}
+
+.center {
+    display: flex;
+    justify-content: center;
+}
+
+#submit {
+    width: fit-content;
+    height: fit-content;
+    font-size: 3em;
+    color: var(--main-color);
+    border: solid var(--main-color) 2px;
+    border-radius: 20px;
+    padding: 20px 50px;
+    background-color: #121212;
+}

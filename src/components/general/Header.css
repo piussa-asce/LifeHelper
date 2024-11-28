@@ -1,0 +1,24 @@
+:root {
+    --gradient: linear-gradient(to right, #3acfd5 0%, #3a4ed5 100%);
+    --main-color: #3acfd5;
+}
+
+#header {
+    background-color: #121212;
+    width: 100vw;
+    height: 150px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    border-style: solid;
+    border-width: 0 0 1px 0;
+    border-image: linear-gradient(to right, #3acfd5 0%, #3a4ed5 100%) 1;
+}
+
+#app-name {
+    font-size: 50px;
+    font-weight: 600;
+    text-align: center;
+    color: var(--main-color);
+}
