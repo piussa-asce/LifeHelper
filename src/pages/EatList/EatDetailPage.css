@@ -1,0 +1,149 @@
+:root {
+    --gradient: linear-gradient(to right, #3acfd5 0%, #3a4ed5 100%);
+    --main-color: #3acfd5;
+}
+
+.detail-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    padding: 10px;
+    background-color: #121212;
+    height: fit-content;
+    overflow: scroll;
+    gap: 20px;
+    position: relative;
+}
+
+.detail-container .name {
+    font-size: 30px;
+    font-weight: 600;
+    background: var(--gradient);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    width: 100%;
+    text-align: center;
+    padding: 10px 20px;
+    border: solid var(--main-color) 2px;
+}
+
+.detail-container .comment {
+    font-size: 20px;
+}
+
+.detail-container .deets {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}
+
+.detail-container .deets .deet {
+    font-size: 17px;
+    color: white;
+    display: flex;
+    flex-direction: row;
+    justify-content: baseline;
+    align-items: center;
+    gap: 2px;
+}
+
+.detail-container .rating {
+    background-color: rgba(30, 175, 233, 0.1);
+    border-radius: 5px;
+    padding: 10px 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+}
+
+.detail-container .rating .person {
+    color: var(--main-color);
+}
+
+.detail-container .rating .ratings {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.detail-container .rating .ratings div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.detail-container .rating .ratings div .tag {
+    font-size: 17px;
+}
+
+.detail-container .final {
+    background-color: rgba(104, 104, 104, 0.1);
+    border: solid rgb(104,104,104) 1px;
+    border-radius: 5px;
+    padding: 10px 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+}
+
+.detail-container .final div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+}
+
+.detail-container .final div p {
+    font-size: 20px;
+}
+
+p {
+    font-size: 20px;
+    color: white;
+    margin: 0;
+}
+
+.button-container {
+    position: fixed;
+    bottom: 50px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    margin: 10px 0 20px 0;
+}
+
+.delete {
+    width: fit-content;
+    height: fit-content;
+    font-size: 1.5em;
+    color: rgb(155, 62, 62);
+    border: solid rgb(104, 104, 104) 1px;
+    border-radius: 20px;
+    padding: 10px 30px;
+    background-color: rgba(30, 175, 233, 0.1);
+}
+
+.edit {
+    width: fit-content;
+    height: fit-content;
+    font-size: 1.5em;
+    color: white;
+    border: solid rgb(104,104,104) 1px;
+    border-radius: 20px;
+    padding: 10px 30px;
+    background-color: rgba(30, 175, 233, 0.1);
+}

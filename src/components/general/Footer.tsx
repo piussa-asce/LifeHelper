@@ -8,7 +8,7 @@ const Footer: React.FC<ContainerProps> = () => {
   let history = useHistory();
   return (
     <div id="container">
-      <img src="../../../public/img/home/home-icon.svg" alt="Home Icon" width="80" height="80" onClick={() => history.push('/home')}/>
+      <img src="/img/home/home-icon.svg" alt="Home Icon" width="30" height="30" onClick={() => history.push('/home')}/>
     </div>
   );
 };

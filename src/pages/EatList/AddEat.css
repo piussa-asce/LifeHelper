@@ -3,11 +3,16 @@
     --main-color: #3acfd5;
 }
 
+.addeat-page {
+    background-color: #121212;
+    height: 100%;
+}
+
 .title-message {
-    margin: 0 50px;
+    margin: 0;
     text-align: center;
-    padding: 50px;
-    font-size: 80px;
+    padding: 20px 0;
+    font-size: 30px;
     font-weight: 600;
     background: var(--gradient);
     -webkit-text-fill-color: transparent;
@@ -15,38 +20,39 @@
 }
 
 form {
-    padding: 20px 50px;
+    padding: 0px 20px;
     display: flex;
     flex-direction: column;
-    gap: 3em;
+    gap: 1em;
 }
 
 .row {
     display: flex;
     flex-direction: row;
     gap: 2em;
+    align-items: center;
+    justify-content: center;
 }
 
 .atv {
     display: flex;
-    flex-direction: row;
-    gap: 5em;
+    flex-direction: column;
+    gap: 0.5em;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
 }
 
 .col {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     gap: 2em;
-    width: 20em;
+    width: 15em;
     justify-content: center;
     align-items: center;
     border: solid white 2px;
-    padding: 1em 0 2em 0;
+    padding: 0.5em 0 0.5em 0;
     border-radius: 20px;
 }
-
 .element {
     display: flex;
     flex-direction: column;
@@ -55,27 +61,35 @@ form {
 }
 
 input[type="text"] {
-    width: 10em;
+    background-color: #121212;
+    width: 9em;
     height: 2em;
-    font-size: 3em;
+    font-size: 1em;
     border: solid white;
     border-width: 0 0 2px 0;
 }
 
 input[type="date"] {
-    width: 10em;
+    background-color: #121212;
+    width: 9em;
     height: 2em;
-    font-size: 3em;
+    font-size: 1em;
     border: solid white;
     border-width: 0 0 2px 0;
 }
 
 input[type="number"] {
-    width: 3em;
-    height: 2em;
-    font-size: 3em;
+    background-color: #121212;
+    width: 1em;
+    height: 1em;
+    font-size: 30px;
+    font-weight: 200;
     border: solid white;
     border-width: 0 0 2px 0;
+}
+
+input[type="number"]::placeholder {
+    font-weight: 300;
 }
 
 input:focus {
@@ -85,13 +99,14 @@ input:focus {
 label {
     width: fit-content;
     height: fit-content;
-    font-size: 2.5em;
+    font-size: 1em;
     color: var(--main-color);
 }
 
 .atv-label {
     text-align: center;
-    font-size: 3em;
+    width: 70px;
+    font-size: 1em;
 }
 
 .atv-input {
@@ -102,31 +117,34 @@ label {
     width: 90vw;
     background-color: #121212;
     border-radius: 20px;
-    height: 300px;
+    height: 120px;
     border: solid white 2px;
-    font-size: 2.5em;
-    padding: 10px 20px;
+    font-size: 1em;
+    padding: 10px 10px;
+    color: #a8a8a8;
 }
 
 #price {
-    width: 5em;
+    width: 2em;
 }
 
 input[type="checkbox"] {
-    width: 4em;
-    height: 4em;
+    width: 1.5em;
+    height: 1.5em;
+    background-color: #121212;
 }
 
 .ret {
     display: flex;
     flex-direction: column;
-    justify-content: left;
-    align-items: left;
-    gap: 30px;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
     margin: 0 0 0 50px;
 }
 
 .center {
+    padding: 20px 0 0 0;
     display: flex;
     justify-content: center;
 }
@@ -134,10 +152,10 @@ input[type="checkbox"] {
 #submit {
     width: fit-content;
     height: fit-content;
-    font-size: 3em;
+    font-size: 1.5em;
     color: var(--main-color);
     border: solid var(--main-color) 2px;
     border-radius: 20px;
-    padding: 20px 50px;
+    padding: 8px 20px;
     background-color: #121212;
 }

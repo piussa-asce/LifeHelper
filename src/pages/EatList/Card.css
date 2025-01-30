@@ -16,8 +16,8 @@
         var(--gradient);
     background-origin: border-box;
     background-clip: content-box, border-box;
-    width: 80vw;
-    min-height: 400px;
+    width: 90vw;
+    min-height: 200px;
     position: relative;
 }
 
@@ -28,15 +28,15 @@
     align-items: baseline;
     gap: 10px;
     position: absolute;
-    top: 40px;
-    left: 30px;
+    top: 10px;
+    left: 15px;
     background: var(--gradient);
     -webkit-text-fill-color: transparent;
     -webkit-background-clip: text;
 }
 
 .card .title .id {
-    font-size: 75px;
+    font-size: 1.5em;
     font-weight: 600;
     color: var(--text-color);
 }
@@ -46,7 +46,7 @@
     text-overflow: ellipsis;
     top: 42px;
     left: 200px;
-    font-size: 50px;
+    font-size: 1.5em;
     font-weight: 500;
     color: var(--text-color);
 }
@@ -54,54 +54,55 @@
 .card .location {
     background-image: url('/img/general/location.svg');
     background-repeat: no-repeat;
-    background-size: 40px;
-    padding: 0 0 0 50px;
-    font-size: 40px;
+    background-size: 20px;
+    padding: 0 0 0 25px;
+    font-size: 20px;
     font-weight: 400;
     position: absolute;
-    top: 150px;
-    left: 30px;
+    top: 60px;
+    left: 15px;
 }
 
 .card .date {
     background-image: url('/img/general/calendar.svg');
     background-repeat: no-repeat;
-    background-size: 40px;
-    padding: 0 0 0 50px;
-    font-size: 40px;
+    background-size: 20px;
+    padding: 0 0 0 25px;
+    font-size: 20px;
     font-weight: 400;
     position: absolute;
-    top: 210px;
-    left: 30px;
-}
-
-.card .price {
-    background-image: url('/img/eatlist/euro.svg');
-    background-repeat: no-repeat;
-    background-size: 40px;
-    padding: 0 0 0 50px;
-    font-size: 40px;
-    font-weight: 400;
-    position: absolute;
-    top: 325px;
-    left: 30px;
-}
-
-.card .ovr {
-    font-size: 130px;
-    position: absolute;
-    bottom: 60px;
-    right: 80px;
+    top: 90px;
+    left: 15px;
 }
 
 .card .type {
     background-image: url('/img/eatlist/food.svg');
     background-repeat: no-repeat;
-    background-size: 40px;
-    padding: 0 0 0 50px;
-    font-size: 40px;
+    background-size: 20px;
+    padding: 0 0 0 25px;
+    font-size: 20px;
     font-weight: 400;
     position: absolute;
-    top: 270px;
-    left: 30px;
+    top: 120px;
+    left: 15px;
 }
+
+.card .price {
+    background-image: url('/img/eatlist/euro.svg');
+    background-repeat: no-repeat;
+    background-size: 20px;
+    padding: 0 0 0 25px;
+    font-size: 20px;
+    font-weight: 400;
+    position: absolute;
+    top: 150px;
+    left: 15px;
+}
+
+.card .ovr {
+    font-size: 60px;
+    position: absolute;
+    bottom: 10px;
+    right: 20px;
+}
+

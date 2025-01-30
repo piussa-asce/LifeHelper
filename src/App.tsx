@@ -1,10 +1,14 @@
 import { Redirect, Route } from 'react-router-dom';
 import { IonApp, IonRouterOutlet, setupIonicReact } from '@ionic/react';
 import { IonReactRouter } from '@ionic/react-router';
+import { ToastContainer } from 'react-toastify';
 import Home from './pages/Home';
-import EatList from './pages/EatList';
-import AddEat from './pages/AddEat';
-import EatDetailPage from './pages/EatDetailPage';
+import EatList from './pages/EatList/EatList';
+import AddEat from './pages/EatList/AddEat';
+import EatDetailPage from './pages/EatList/EatDetailPage';
+import EditEatPage from './pages/EatList/EditEatPage';
+
+import FitTracker from './pages/FitTracker/FitTracker';
 
 /* Core CSS required for Ionic components to work properly */
 import '@ionic/react/css/core.css';
@@ -57,8 +61,15 @@ const App: React.FC = () => (
         <Route path="/eatlist/card/:id">
           <EatDetailPage />
         </Route>
+        <Route path="/eatlist/edit/:id">
+          <EditEatPage />
+        </Route>
+        <Route path="/fittracker">
+          <FitTracker />
+        </Route>
       </IonRouterOutlet>
     </IonReactRouter>
+    <ToastContainer position="bottom-center" autoClose={2500} hideProgressBar={false} newestOnTop={false} closeOnClick rtl={false} pauseOnFocusLoss draggable pauseOnHover={false} theme="dark" />
   </IonApp>
 );
 

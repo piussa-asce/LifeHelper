@@ -1,0 +1,56 @@
+:root {
+    --gradient: linear-gradient(to right, #3acfd5 0%, #3a4ed5 100%);
+    --main-color: #3acfd5;
+}
+
+#home-page {
+    background-color: #121212;
+}
+
+#welcome-message {
+    margin: 0;
+    padding: 40px 0 40px 20px;
+    text-align: left;
+    font-size: 2em;
+    font-weight: 600;
+    background: var(--gradient);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+}
+
+#home-list {
+    padding: 0 0 20px 0;
+    height: fit-content;
+    width: 100vw;
+    overflow-y: scroll;
+    display: flex;
+    flex-direction: column;
+    justify-content: top;
+    align-items: center;
+    gap: 18px;
+}
+
+#home-list::-webkit-scrollbar {
+    display: none;
+}
+
+a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    width: 90vw;
+    min-height: 4em;
+    font-size: 1.5em;
+    font-weight: 500;
+    text-align: center;
+    padding: 10px;
+
+    letter-spacing: 4px;
+    border-radius: 30px;
+    background-color: #000;
+    border: solid var(--main-color) 1px;
+    background: var(--gradient);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+}

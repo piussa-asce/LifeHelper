@@ -1,0 +1,48 @@
+/* tooltip */
+
+.custom-tooltip {
+    background-color: #121212;
+    padding: 2px 10px 2px 5px;
+    border: solid #94DEA5 1px;
+}
+
+.custom-tooltip .row {
+    color: white;
+    font-size: 15px;
+    text-indent: 20px;
+}
+
+.custom-tooltip .row.date {
+    background: url("/img/fittracker/time.svg") no-repeat;
+    background-size: 15px;
+}
+
+.custom-tooltip .row.weight {
+    background: url("/img/fittracker/weight.svg") no-repeat;
+    background-size: 15px;
+}
+
+.custom-tooltip .row.padel {
+    background: url("/img/fittracker/racket.svg") no-repeat;
+    background-size: 15px;
+}
+
+.custom-tooltip .row.gym {
+    background: url("/img/fittracker/gym.svg") no-repeat;
+    background-size: 15px;
+}
+
+.custom-tooltip .row.basketball {
+        background: url("/img/fittracker/basketball.svg") no-repeat;
+    background-size: 15px;
+}
+
+.custom-tooltip .row.climbing {
+    background: url("/img/fittracker/climbing.svg") no-repeat;
+    background-size: 15px;
+}
+
+.custom-tooltip .row.other {
+    background: url("/img/fittracker/star.svg") no-repeat;
+    background-size: 15px;
+}

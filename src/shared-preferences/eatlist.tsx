@@ -1,5 +1,4 @@
-import { Preferences } from '@capacitor/preferences';
-import { wait } from '@testing-library/user-event/dist/cjs/utils/index.js';
+import { get, set, remove, incrementAndSaveNewLastId } from './shared-preferences';
 
 export interface Restaurant {
     id: number;
@@ -21,43 +20,26 @@ export interface Restaurant {
 export const RESTAURANTS_KEY = 'restaurants';
 export const LAST_RESTAURANT_ID = 'last_restaurant_id';
 
-export const get = async (getKey: string) => {
-    const { value } = await Preferences.get({ key: getKey });
-    return value;
-}
-
-export const set = async (setKey: string, setValue: string) => {
-    await Preferences.set({
-        key: setKey,
-        value: setValue,
-    });
-}
-
-export const remove = async (removeKey: string) => {
-    await Preferences.remove({ key: removeKey });
-}
-
 export const addRestaurant = async (setValue: Restaurant) => {
     
     let lid = await get(LAST_RESTAURANT_ID);
-    let lastId = 1;
-    if (lid != null) {
-        lastId = parseInt(lid);
-    }
+    let lastId = (lid) ? parseInt(lid) : 1;
+
     setValue.id = lastId;
-    incrementAndSaveNewLastId(LAST_RESTAURANT_ID, lastId);
+    await incrementAndSaveNewLastId(LAST_RESTAURANT_ID, lastId);
+    
     const currentList = await get(RESTAURANTS_KEY);
 
     if (currentList == null) {
         set(RESTAURANTS_KEY, JSON.stringify([setValue]));
-        return {success: true};
+        return {status: true};
     }
     else {
         let restaurantList = JSON.parse(currentList);
         if (!alreadyExists(restaurantList, setValue)) {
             restaurantList.push(setValue);
             set(RESTAURANTS_KEY, JSON.stringify(restaurantList));
-            return {success: true};
+            return {status: true};
         }
     }
 }
@@ -68,23 +50,23 @@ export const removeRestaurant = async (removeId: number) => {
         const parsedList = JSON.parse(currentList);
         const filteredList = parsedList.filter((item: Restaurant) => !(item.id == removeId));
         set(RESTAURANTS_KEY, JSON.stringify(filteredList));
-        return {success: true};
+        return {status: true};
     }
-    return {success: false, message: "Restaurant list was empty."}
+    return {status: false, message: "Restaurant list was empty."}
 }
 
-export const editRestaurant = async (editId: number, editObject: object) => { // edit object must be { string: string, ...}
+export const editRestaurant = async (r: Restaurant) => {
     const currentList = await get(RESTAURANTS_KEY);
     if (currentList != null) {
         const parsedList = JSON.parse(currentList);
-        const idx = parsedList.findIndex((item: Restaurant) => item.id == editId);
-        for (const[key, value] of Object.entries(editObject)) {
-            parsedList[idx][key] = value;
-        }
-        set(RESTAURANTS_KEY, JSON.stringify(parsedList));
-        return {sucess: true};
+        const idx = parsedList.findIndex((item: Restaurant) => item.id == r.id);
+        if (idx != -1) {
+            parsedList[idx] = r;
+            set(RESTAURANTS_KEY, JSON.stringify(parsedList));
+            return {status: true};
+        } else return {status: false, message: "No restaurant with that id."};
     }
-    return {success: false, message: "Restaurant list was empty."};
+    return {status: false, message: "Restaurant list was empty."};
 }
 
 export const getRestaurant = async (rId: number) => {
@@ -93,15 +75,9 @@ export const getRestaurant = async (rId: number) => {
     const parsedList = JSON.parse(currentList);
     const restaurant = parsedList.filter((card: Restaurant) => (card.id == rId));
     if (restaurant.length == 0) return {sucess: false, message: "No items with that id."}
-    if (restaurant.length > 1) return {success: false, message: "More than one item was detected with that id."}
-    return {success: true, data: restaurant[0]};
+    return {status: true, data: restaurant[0]};
 }
 
 const alreadyExists = (list: any, v: Restaurant) => {
     return list.filter((item: Restaurant) => (item.name == v.name && item.location == v.location && item.type == v.type)).length > 0
-}
-
-const incrementAndSaveNewLastId = (key: string, lastId: number) => {
-    let newLastId = lastId + 1;
-    set(key, newLastId.toString());
 }

@@ -1,0 +1,265 @@
+:root {
+    --gradient: linear-gradient(to right, #3acfd5 0%, #3a4ed5 100%);
+    --ft-color: #94DEA5;
+    --secondary-color: #2dce55;
+    --bgc: #1f1e1e;
+}
+
+/* header */
+
+#header-green {
+    background-color: #121212;
+    width: 100vw;
+    height: 50px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    border-style: solid;
+    border-width: 0 0 1px 0;
+    border-color: var(--secondary-color);
+    border-image: none;
+}
+
+#app-name-green {
+    font-size: 1.5em;
+    font-weight: 300;
+    text-align: center;
+    color: var(--secondary-color);
+}
+
+/* choose page */
+
+.select {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    border-width: 0 0 1px 0;
+    width: 100vw;
+    padding: 30px 0 20px 0;
+    border-width: 0 0 1px 0;
+}
+
+.select span {
+    color: var(--ft-color);
+    padding: 3px 10px;
+}
+
+.select span.on {
+    border: solid var(--ft-color);
+    border-width: 0 0 1px 0;
+    background-color: var(--ft-color);
+    border-radius: 12px;
+    color: black;
+    padding: 10px 12px;
+}
+
+/* page */
+
+#add-wg-popup {
+    display: none;
+    z-index: 10;
+    flex-direction: column;
+    align-items: flex-start;
+    background-color: var(--bgc);
+    border-radius: 5px;
+    width: fit-content;
+    height: fit-content;
+    padding: 10px;
+    position: absolute;
+    bottom: 110px;
+    right: 50px;
+    border: solid var(--ft-color) 1px;
+}
+
+#add-wg-popup .add-popup-title {
+    font-size: 25px;
+    width: 100%;
+    text-align: center;
+    color: var(--ft-color);
+}
+
+#add-wg-popup label {
+    display: flex;
+    flex-direction: row;
+    flex: 1;
+    gap: 10px;
+    align-items: flex-end;
+    justify-content: center;
+    color: white;
+} 
+
+#add-wg-popup label input {
+    background-color: var(--bgc);
+}
+
+#add-wg-popup label input[type="number"] {
+    width: 50px;
+    font-size: 20px;
+    font-weight: 300;
+}
+
+#add-wg-popup #submit {
+    background-color: var(--ft-color);
+    color: #1f1e1e;
+    font-weight: 500;
+    margin: 0 auto;
+    border-radius: 5px;
+    padding: 4px 10px;
+    border: none;
+}
+
+#action-button {
+    position: absolute;
+    bottom: 50px;
+    right: 50px;
+    width: fit-content;
+    background-color: #121212;
+}
+
+#add-wk-popup {
+    display: none;
+    z-index: 10;
+    flex-direction: column;
+    align-items: flex-start;
+    background-color: var(--bgc);
+    border-radius: 5px;
+    width: fit-content;
+    height: fit-content;
+    padding: 10px;
+    position: absolute;
+    bottom: 110px;
+    right: 50px;
+    border: solid var(--ft-color) 1px;
+}
+
+#add-wk-popup .add-popup-title {
+    font-size: 25px;
+    width: 100%;
+    text-align: center;
+    color: var(--ft-color);
+}
+
+#add-wk-popup label {
+    display: flex;
+    flex-direction: row;
+    flex: 1;
+    gap: 10px;
+    align-items: flex-end;
+    justify-content: center;
+    color: white;
+}
+
+#add-wk-popup label input {
+    background-color: var(--bgc);
+}
+
+#add-wk-popup label input[type="number"] {
+    width: 50px;
+    font-size: 20px;
+    font-weight: 300;
+}
+
+#add-wk-popup #submit {
+    background-color: var(--ft-color);
+    color: #1f1e1e;
+    font-weight: 500;
+    margin: 0 auto;
+    border-radius: 5px;
+    padding: 4px 10px;
+    border: none;
+}
+
+/* Weight Tracker */
+
+.chart-container {
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 35px;
+}
+
+.chart-container .title {
+    font-size: 25px;
+    font-weight: 400;
+    color: var(--ft-color);
+}
+
+.stats {
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    background-color: var(--bgc);
+    margin: 0 20px;
+    border-radius: 10px;
+    height: fit-content;
+    padding: 15px 0 0 0;
+    height: 100px;
+    width: 95vw;
+}
+
+.stats li {
+    font-size: 15px;
+    position: relative;
+    width: 100px;
+    height: 100%;
+}
+
+.stats li .li-title {
+    position: absolute;
+    top: 5px;
+    left: 15px;
+    color: var(--ft-color);
+}
+
+.stats li .img {
+    width: 20px;
+    height: 15px;
+    position: absolute;
+    display: none;
+}
+
+.stats li .img.up {
+    top: 28px;
+    left: 9px;
+    display: block;
+    filter: brightness(0) saturate(100%) invert(38%) sepia(43%) saturate(4882%) hue-rotate(340deg) brightness(98%) contrast(89%);
+}
+
+.stats li .img.down {
+    top: 53px;
+    left: 9px;
+    display: block;
+    transform: rotate(180deg);
+    filter: brightness(0) saturate(100%) invert(81%) sepia(19%) saturate(1409%) hue-rotate(58deg) brightness(105%) contrast(98%);
+}
+
+.stats li .avg {
+    position: absolute;
+    top: 40px;
+    left: 35px;
+}
+
+.stats li .diff {
+    font-size: 10px;
+    position: absolute;
+    top: 42px;
+    left: 7px;
+    width: 25px;
+    text-align: center;
+}
+
+.stats li .count {
+    position: absolute;
+    top: 35px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: large;
+}

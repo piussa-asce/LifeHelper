@@ -6,7 +6,7 @@
 #header {
     background-color: #121212;
     width: 100vw;
-    height: 150px;
+    height: 50px;
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -17,8 +17,8 @@
 }
 
 #app-name {
-    font-size: 50px;
-    font-weight: 600;
+    font-size: 1.5em;
+    font-weight: 300;
     text-align: center;
     color: var(--main-color);
 }
